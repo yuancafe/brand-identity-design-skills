@@ -51,6 +51,7 @@ Use the generated wrapper skills in future sessions to:
 - use `<brand-slug>-brand-applications` to list bundles, generate application work, and produce manual briefs
 - use `<brand-slug>-brand-guidelines` to restate the visual language and direct on-brand design work across tools
 - reuse the design-md files as AI-readable design instructions for Stitch, Figma MCP, Pencil, and similar tooling
+- automatically generate brand-specific tool prompt files so downstream tools and models do not start from blank generic prompts
 
 ## Resources
 

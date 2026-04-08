@@ -22,6 +22,7 @@ The brand-guidelines wrapper should support:
 2. guide new design work such as posters, campaign assets, pages, and collateral
 3. route tasks to the right design-doc source file
 4. warn when a request would change the identity system rather than apply it
+5. include brand-specific prompt files for downstream tools and models
 
 ## Thin-wrapper rule
 
@@ -31,3 +32,4 @@ Both wrappers should stay thin:
 - read the bundled `brand_pack.json`
 - read the bundled design markdown files when present
 - route to the common factory logic when needed
+- automatically bundle tool adapters and brand-specific prompt files so the wrapper is self-contained

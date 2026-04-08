@@ -24,7 +24,7 @@ Use the bundled brand pack at `{pack_rel_path}` and the bundled design markdown 
 4. `references/tool-prompt-skeleton-index.md`
 5. the specific design markdown file matched to the task
 6. the specific tool adapter matched to the task
-7. the specific prompt skeleton matched to the task
+7. the specific brand-specific prompt file matched to the task
 
 ## Task routing
 
@@ -59,7 +59,7 @@ For a specific tool or model, read:
 - `references/tool-adapter-index.md`
 - the matching file under `references/tool-adapters/`
 - `references/tool-prompt-skeleton-index.md`
-- the matching file under `references/tool-prompt-skeletons/`
+- the matching brand-specific file under `references/tool-prompt-skeletons/`
 
 ## Operating rules
 

@@ -4,26 +4,32 @@
 
 ## English
 
-Brand Identity Design Skills is a reusable bundle for full brand identity engagements. It turns the current VIS workflow into a structured package that covers the full path from discovery to governance, including the application-production phase that studio work usually treats as a separate layer.
+Brand Identity Design Skills is a full VIS system for AI-assisted brand work. It is not just a set of prompts for logo or UI exploration. It is a bundled workflow that turns brand strategy, visual direction, identity production, application expansion, and governance handoff into reusable skill logic plus machine-readable design outputs.
 
-The design-markdown layer in this bundle is inspired by the broader `DESIGN.md` ecosystem around Stitch and curated examples such as VoltAgent's `awesome-design-md`, then expanded for full VIS work instead of UI-only work.
+This bundle is built for teams who want AI to work from explicit brand rules instead of vague taste prompts. It combines:
 
-It also absorbs core methodology from the local `visual-identity-direction` skill, including strategy-to-visual translation, creative-brief discipline, moodboard rationale, logo-brief thinking, photography direction, and typography/color reasoning.
+- a 5-step public VIS workflow
+- support skills for scope planning, routing, playbook selection, and packaging
+- design-markdown outputs for AI-readable brand guidance
+- tool adapters for different design tools and model families
+- auto-generated brand-specific wrapper skills and prompt files
 
-### What this package is for
+The design-markdown approach is informed by the broader `DESIGN.md` ecosystem around Stitch and examples such as VoltAgent's `awesome-design-md`, then expanded from UI/UX into full brand identity and VIS work.
 
-- Diagnose a brand project and choose the right route
-- Narrow visual directions with structured playbooks
-- Distill 8-15 references into a reusable style-extraction document instead of a loose moodboard dump
-- Produce the core identity system
-- Expand the identity into applications and touchpoints
-- Package everything into a reusable `brand-pack`, brand-specific wrapper skill, and AI-readable design markdown files
-- Generate both a brand-applications wrapper and a brand-guidelines wrapper for direct downstream use
-- Automatically generate brand-specific prompt files for each supported tool and model family
+It also incorporates useful methodology from the local `visual-identity-direction` skill, including strategy-to-visual translation, creative-brief discipline, moodboard rationale, logo-brief structure, photography direction, and typography/color reasoning.
 
-### What is included
+### What this bundle does
 
-Public skills in this bundle:
+- Diagnose a brand project and choose the right production route
+- Distill multiple reference brands into an original direction instead of copying them
+- Build the core identity system
+- Expand the identity into application families and touchpoints
+- Publish a machine-readable `brand-pack`
+- Generate AI-readable design files for foundation, UI/UX, and applications
+- Generate thin wrapper skills for downstream brand use
+- Auto-generate brand-specific prompts for each supported tool and model family
+
+### Public skills
 
 - `brand-discovery-strategy`
 - `visual-concept-exploration`
@@ -31,7 +37,7 @@ Public skills in this bundle:
 - `brand-application-system`
 - `brand-governance-rollout`
 
-Supporting internal skills:
+### Support skills
 
 - `brand-style-playbook-selector`
 - `application-scope-planner`
@@ -40,99 +46,131 @@ Supporting internal skills:
 - `application-mockup-composer`
 - `brand-application-factory`
 
-Package references:
+### Core outputs
 
-- `references/V3_ARCHITECTURE.md`
-- `references/PROCESS_SYNTHESIS.md`
-
-AI-readable design deliverables:
+Design-markdown outputs:
 
 - `REFERENCE_STYLE_DISTILLATION.md`
 - `BRAND_FOUNDATION_DESIGN.md`
 - `UI_UX_DESIGN.md`
 - `APPLICATION_DESIGN.md`
 - `DESIGN_INDEX.md`
-- `TOOL_ADAPTER_INDEX.md`
-- tool-specific adapter contracts
-- `TOOL_PROMPT_SKELETON_INDEX.md`
-- tool-specific prompt skeletons
 
-Wrapper-skill deliverables:
+Packaging outputs:
 
+- `brand_pack.json`
 - `<brand-slug>-brand-applications`
 - `<brand-slug>-brand-guidelines`
-- brand-specific prompt files under `references/tool-prompt-skeletons/` inside each generated wrapper
 
-Support assets and scripts:
+Tool-enablement outputs:
 
-- `support/brand-style-playbook-selector/assets/brand_style_playbooks.json`
-- `support/brand-style-playbook-selector/assets/sample_brand_brief.json`
-- `support/brand-style-playbook-selector/scripts/select_playbooks.py`
-- `support/application-scope-planner/assets/sample_application_request.json`
-- `support/application-scope-planner/assets/starter_bundles.json`
-- `support/application-scope-planner/scripts/build_scope_matrix.py`
-- `support/application-route-classifier/scripts/classify_routes.py`
-- `support/application-template-factory/references/template-output-contract.md`
-- `support/application-mockup-composer/references/mockup-output-contract.md`
-- `support/brand-application-factory/assets/sample_brand_foundation.json`
-- `support/brand-application-factory/assets/wrapper_skill_template.md`
+- `TOOL_ADAPTER_INDEX.md`
+- `references/tool-adapters/*.md`
+- `TOOL_PROMPT_SKELETON_INDEX.md`
+- `references/tool-prompt-skeletons/*.md`
+
+### What gets auto-generated
+
+When the bundle reaches the packaging stage, it does not stop at generic documentation.
+
+It automatically generates:
+
+- a final machine-readable `brand_pack.json`
+- a brand-specific applications wrapper skill
+- a brand-specific guidelines wrapper skill
+- a self-contained set of tool adapters inside each generated wrapper
+- a self-contained set of brand-specific prompt files inside each generated wrapper
+
+Those brand-specific prompt files are generated for:
+
+- Figma MCP
+- Stitch
+- Pencil
+- Adobe Illustrator
+- Adobe Photoshop
+- Canva
+- Inkscape
+- image-generation models such as Doubao, Kling, Nano Banana, and similar tools
+
+So downstream design work can start from brand-filled prompts instead of blank generic templates.
+
+### Workflow
+
+1. `brand-discovery-strategy`
+   Diagnose the project, audit existing assets, define scope, and build the strategic base.
+2. `visual-concept-exploration`
+   Translate strategy into visual territories, distill references, and choose the strongest direction.
+3. `identity-system-production`
+   Build the identity core and the first structured brand payload.
+4. `brand-application-system`
+   Turn the identity into application families, production routes, and scaling logic.
+5. `brand-governance-rollout`
+   Finalize the pack, governance, handoff documents, and reusable automation layer.
+
+### Why application production is a separate phase
+
+Application production is not just “more design.” It has its own scope logic, route logic, output logic, and scaling constraints. This bundle treats it as an explicit layer so teams can handle a small set of touchpoints or a large rollout without flattening everything into one vague guideline file.
+
+### Repository structure
+
+- `skills/`
+  Public VIS workflow skills
+- `support/`
+  Internal packaging, routing, and production support skills
+- `references/`
+  Shared architecture notes, adapter contracts, and prompt skeleton references
+- `README.md`
+  Package overview
+- `CHANGELOG.md`
+  Version history
+
+### Important notes
+
+- The public repository keeps paths generic and does not expose local absolute installation paths.
+- `brand_pack.json` is the downstream source of truth for automation.
+- Illustrator-heavy work is still treated as `manual_vector`.
+- Canva-friendly work is routed through template logic.
+- Photoshop-friendly work is routed through mockup logic.
+- The wrapper layer is intentionally thin. It should apply the approved system, not redefine it.
+
+### Key files
+
+- `references/V3_ARCHITECTURE.md`
+- `references/PROCESS_SYNTHESIS.md`
+- `references/TOOL_ADAPTER_INDEX.md`
+- `references/TOOL_PROMPT_SKELETON_INDEX.md`
 - `support/brand-application-factory/scripts/build_brand_pack.py`
 - `support/brand-application-factory/scripts/generate_wrapper_skill.py`
-- `references/tool-adapters/`
-- `references/tool-prompt-skeletons/`
-
-### How the flow works
-
-1. `brand-discovery-strategy` gathers context, audits existing assets, and frames the scope.
-2. `visual-concept-exploration` narrows style territories and selects the strongest directions.
-3. `identity-system-production` builds the core identity system and the first machine-readable `brand-pack`.
-4. `brand-application-system` turns the identity into scoped application bundles, recipes, and production routes.
-5. `brand-governance-rollout` finalizes the pack, governance rules, asset manifest, and handoff.
-
-### Why the application phase is separate
-
-Application work is not just "more design." It is a different production layer with its own scope logic, route logic, and output logic. This package keeps that layer explicit so teams can handle 5 items, 20 items, or 100+ items without flattening everything into one vague deliverable.
-
-### Package notes
-
-- The package is designed to be installable into a local skills directory, but the public repository keeps paths generic.
-- The repository includes the reusable skills, the support layer, and the package-level documentation.
-- Version history is tracked in `CHANGELOG.md`; this repo release corresponds to the current bundled release line.
-- The bundle now treats markdown design-system files as first-class outputs so MCP-based design tools can follow the brand more consistently.
-- The bundle can also generate a thin brand-guidelines-style skill so downstream tools can be prompted against the approved brand directly, not only against raw markdown files.
-- The bundle now includes tool-adapter contracts for Figma MCP, Stitch, Pencil, Adobe Illustrator, Adobe Photoshop, Canva, Inkscape, and text-to-image model workflows.
-- The bundle now includes standard prompt skeletons for each supported tool so teams can invoke them consistently instead of rewriting prompts from scratch.
-- The wrapper generation step now auto-builds brand-specific prompt files for Figma MCP, Stitch, Pencil, Illustrator, Photoshop, Canva, Inkscape, and image-generation models.
-
-### Notes
-
-- Illustrator-heavy work is still treated as `manual_vector`.
-- Canva-friendly work can be routed through template workflows.
-- Photoshop-friendly work can be routed through mockup workflows.
-- The `brand-pack` is the source of truth for downstream automation.
+- `support/brand-application-factory/assets/sample_brand_foundation.json`
 
 ## 中文
 
-Brand Identity Design Skills 是一个可复用的品牌视觉识别技能包。它把当前 VIS 流程整理成一个结构化套件，覆盖从诊断、概念探索、基础系统生产，到应用生产和治理交付的完整链路，并把 studio 里常常单独处理的 application 阶段明确拆出来。
+Brand Identity Design Skills 是一套面向 AI 协作的完整 VIS 系统。它不是只给 logo 或 UI 灵感的 prompt 集，而是把品牌策略、视觉方向、识别系统生产、应用扩展、治理交接，统一封装成可复用的 skill 工作流和机器可读输出。
 
-本包中的 design markdown 层参考了 Stitch 周边的 `DESIGN.md` 生态，以及 VoltAgent 的 `awesome-design-md` 示例库，再把它扩展到 UI/UX 之外的整套 VIS 场景。
+这个 bundle 的目标，是让 AI 不是凭模糊审美“猜品牌”，而是根据明确的品牌规则来工作。它把下面几层整合在一起：
 
-同时也吸收了本地 `visual-identity-direction` skill 中有价值的方法论，包括 strategy-to-visual translation、creative brief、moodboard rationale、logo brief、摄影方向，以及字体和色彩的推导逻辑。
+- 5 步公开 VIS 工作流
+- scope、route、playbook、packaging 等支持技能
+- AI 可读的 design markdown 输出
+- 面向不同设计工具和模型的 adapter
+- 自动生成的品牌专属 wrapper skill 和 prompt 文件
 
-### 这个技能包是做什么的
+其中 design-markdown 的思路参考了 Stitch 周边的 `DESIGN.md` 生态，以及 VoltAgent 的 `awesome-design-md`，但能力范围从 UI/UX 扩展到了完整 VIS。
 
-- 诊断品牌项目并判断正确路径
-- 用结构化 playbook 收敛视觉方向
-- 把 8-15 个参考品牌提炼成可复用的风格提取文档，而不是松散拼贴
-- 产出核心身份系统
-- 把身份系统扩展成各类应用物料和触点
-- 把所有内容封装成可复用的 `brand-pack`、品牌专属 wrapper skill，以及 AI 可读的设计 markdown 文件
-- 生成品牌应用 wrapper 和品牌 guidelines wrapper，方便后续直接调用
-- 自动生成各工具和模型可直接使用的品牌专属 prompt 文件
+同时也吸收了本地 `visual-identity-direction` skill 中可复用的方法论，包括 strategy-to-visual translation、creative brief、moodboard rationale、logo brief、摄影方向，以及字体和色彩推导逻辑。
 
-### 包含什么
+### 这个 bundle 能做什么
 
-公开技能：
+- 诊断品牌项目并选择正确生产路径
+- 把多个参考品牌提炼成原创方向，而不是直接模仿
+- 构建核心识别系统
+- 把识别系统扩展成应用家族和触点体系
+- 产出机器可读的 `brand-pack`
+- 生成 foundation、UI/UX、application 三层 AI 可读设计文件
+- 生成可直接下游调用的 wrapper skill
+- 为每种支持的工具和模型自动生成品牌专属 prompt
+
+### 公开技能
 
 - `brand-discovery-strategy`
 - `visual-concept-exploration`
@@ -140,48 +178,7 @@ Brand Identity Design Skills 是一个可复用的品牌视觉识别技能包。
 - `brand-application-system`
 - `brand-governance-rollout`
 
-包内参考文档：
-
-- `references/V3_ARCHITECTURE.md`
-- `references/PROCESS_SYNTHESIS.md`
-
-AI 可读设计交付物：
-
-- `REFERENCE_STYLE_DISTILLATION.md`
-- `BRAND_FOUNDATION_DESIGN.md`
-- `UI_UX_DESIGN.md`
-- `APPLICATION_DESIGN.md`
-- `DESIGN_INDEX.md`
-- `TOOL_ADAPTER_INDEX.md`
-- 各工具 adapter contract
-- `TOOL_PROMPT_SKELETON_INDEX.md`
-- 各工具 prompt skeleton
-
-wrapper 交付物：
-
-- `<brand-slug>-brand-applications`
-- `<brand-slug>-brand-guidelines`
-- 每次生成 wrapper 时自动产出的品牌专属 prompt 文件，位于 `references/tool-prompt-skeletons/`
-
-支持性资产和脚本：
-
-- `support/brand-style-playbook-selector/assets/brand_style_playbooks.json`
-- `support/brand-style-playbook-selector/assets/sample_brand_brief.json`
-- `support/brand-style-playbook-selector/scripts/select_playbooks.py`
-- `support/application-scope-planner/assets/sample_application_request.json`
-- `support/application-scope-planner/assets/starter_bundles.json`
-- `support/application-scope-planner/scripts/build_scope_matrix.py`
-- `support/application-route-classifier/scripts/classify_routes.py`
-- `support/application-template-factory/references/template-output-contract.md`
-- `support/application-mockup-composer/references/mockup-output-contract.md`
-- `support/brand-application-factory/assets/sample_brand_foundation.json`
-- `support/brand-application-factory/assets/wrapper_skill_template.md`
-- `support/brand-application-factory/scripts/build_brand_pack.py`
-- `support/brand-application-factory/scripts/generate_wrapper_skill.py`
-- `references/tool-adapters/`
-- `references/tool-prompt-skeletons/`
-
-支持性内部技能：
+### 支持技能
 
 - `brand-style-playbook-selector`
 - `application-scope-planner`
@@ -190,32 +187,99 @@ wrapper 交付物：
 - `application-mockup-composer`
 - `brand-application-factory`
 
-### 工作流怎么走
+### 核心输出
 
-1. `brand-discovery-strategy` 做背景诊断、资产盘点和范围判断。
-2. `visual-concept-exploration` 用 style playbook 收敛方向。
-3. `identity-system-production` 生产核心识别系统和第一版机器可读 `brand-pack`。
-4. `brand-application-system` 把身份系统转成应用包、应用 recipe 和生产路线。
-5. `brand-governance-rollout` 完成 brand-pack、治理规则、资产清单和交付。
+design-markdown 输出：
 
-### 为什么要单独分出 application 阶段
+- `REFERENCE_STYLE_DISTILLATION.md`
+- `BRAND_FOUNDATION_DESIGN.md`
+- `UI_UX_DESIGN.md`
+- `APPLICATION_DESIGN.md`
+- `DESIGN_INDEX.md`
 
-Application 不是“多做一点设计”，而是另一层生产系统，拥有独立的范围逻辑、路由逻辑和输出逻辑。把这一层单独拆开后，才能稳定处理 5 项、20 项，甚至 100+ 项的应用需求，而不会把所有内容压成一个模糊交付。
+包装输出：
 
-### 包说明
+- `brand_pack.json`
+- `<brand-slug>-brand-applications`
+- `<brand-slug>-brand-guidelines`
 
-- 公开仓库不会写入本地绝对路径。
-- 本地安装由技能管理流程完成，仓库只保留可复用的内容和说明。
-- 版本历史记录在 `CHANGELOG.md`，当前对应的是 bundle 的最新发布线。
-- 现在这套 bundle 会把 design markdown 作为一等输出，方便 Stitch、Figma MCP、Pencil 等工具按同一套文件做设计。
-- 同时还能生成一个类似 `brand-guidelines` 的轻量 wrapper，让下游工具直接按品牌规则工作。
-- 现在还额外补了按工具区分的 adapter contract，方便 Adobe、Canva、Inkscape 以及文生图模型按各自能力边界执行。
-- 现在也补了各工具的标准 prompt skeleton，后续可以直接调用，不用每次从零写 prompt。
-- wrapper 生成步骤现在还会自动产出各工具的品牌专属 prompt 文件，不再需要手动从通用 skeleton 二次改写。
+工具协同输出：
 
-### 说明
+- `TOOL_ADAPTER_INDEX.md`
+- `references/tool-adapters/*.md`
+- `TOOL_PROMPT_SKELETON_INDEX.md`
+- `references/tool-prompt-skeletons/*.md`
 
-- Illustrator 重型工作仍然按 `manual_vector` 处理。
-- 适合 Canva 的内容走模板路线。
-- 适合 Photoshop 的内容走样机路线。
-- `brand-pack` 是后续自动化的唯一事实来源。
+### 哪些内容是自动生成的
+
+当流程走到 packaging 阶段时，bundle 不只是产出通用文档。
+
+它会自动生成：
+
+- 最终 machine-readable `brand_pack.json`
+- 品牌专属 applications wrapper skill
+- 品牌专属 guidelines wrapper skill
+- 每个 wrapper 内自带的一套 tool adapters
+- 每个 wrapper 内自带的一套品牌专属 prompt 文件
+
+这些品牌专属 prompt 目前覆盖：
+
+- Figma MCP
+- Stitch
+- Pencil
+- Adobe Illustrator
+- Adobe Photoshop
+- Canva
+- Inkscape
+- 文生图模型，如豆包、可灵、Nano Banana 及类似工具
+
+也就是说，下游做设计时，不需要再从空白通用模板开始改，而是直接从品牌已填充好的 prompt 出发。
+
+### 工作流
+
+1. `brand-discovery-strategy`
+   做项目诊断、资产盘点、范围判断，建立策略基础。
+2. `visual-concept-exploration`
+   把策略翻译成视觉方向，提炼参考风格，并收敛到最优方向。
+3. `identity-system-production`
+   构建识别系统核心，并产出第一版结构化品牌数据。
+4. `brand-application-system`
+   把识别系统扩展成应用家族、生产路线和规模化逻辑。
+5. `brand-governance-rollout`
+   完成最终 pack、治理规则、交付文件和可复用自动化层。
+
+### 为什么 application 要单独成阶段
+
+Application 不是“再做一些设计”，而是独立的一层生产系统，有自己的范围逻辑、路由逻辑、输出逻辑和规模化约束。只有把它单独拆出来，才能稳定处理少量触点，也能支撑大规模 rollout，而不是把所有东西压成一份模糊 guideline。
+
+### 仓库结构
+
+- `skills/`
+  公开 VIS 工作流技能
+- `support/`
+  内部 packaging、routing、production 支持技能
+- `references/`
+  共享架构说明、adapter contract 和 prompt skeleton 参考
+- `README.md`
+  项目总览
+- `CHANGELOG.md`
+  版本历史
+
+### 重要说明
+
+- 公开仓库只保留泛化路径，不暴露本地绝对安装路径。
+- `brand_pack.json` 是后续自动化的唯一事实来源。
+- Illustrator 重型工作仍然归为 `manual_vector`。
+- 适合 Canva 的内容走模板生产逻辑。
+- 适合 Photoshop 的内容走样机生产逻辑。
+- wrapper 层刻意保持轻量，它负责应用已批准的系统，而不是重新定义系统。
+
+### 关键文件
+
+- `references/V3_ARCHITECTURE.md`
+- `references/PROCESS_SYNTHESIS.md`
+- `references/TOOL_ADAPTER_INDEX.md`
+- `references/TOOL_PROMPT_SKELETON_INDEX.md`
+- `support/brand-application-factory/scripts/build_brand_pack.py`
+- `support/brand-application-factory/scripts/generate_wrapper_skill.py`
+- `support/brand-application-factory/assets/sample_brand_foundation.json`

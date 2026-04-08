@@ -1,13 +1,13 @@
 ---
-name: brand-identity-design-skills
-description: A bundled brand identity design skill suite that covers discovery, concept exploration, identity system production, application production, and governance rollout. Use when working on a full brand identity engagement or when packaging reusable brand design workflows.
+name: vis-studio
+description: VIS STUDIO is an AI-native operating system for brand identity and visual identity system work. It covers discovery, concept exploration, identity-system production, application production, governance rollout, and downstream packaging for reusable brand execution.
 ---
 
-# Brand Identity Design Skills
+# VIS STUDIO
 
 ## Overview
 
-This package bundles the VIS v3 workflow into one reusable suite for end-to-end brand identity work.
+VIS STUDIO bundles the full VIS workflow into one reusable suite for end-to-end brand identity work.
 
 ## Included public skills
 

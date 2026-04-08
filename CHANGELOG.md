@@ -4,7 +4,12 @@
 
 ## English
 
-### 1.5 - Current release
+### 1.6 - Current release
+
+- Renamed the suite identity from `brand-identity-design-skills` to `VIS STUDIO` with `vis-studio` as the technical skill name.
+- Reframed the README with a stronger product-facing narrative so the repository is easier to understand, share, and present publicly.
+
+### 1.5 - Methodology and intake release
 
 - Integrated reusable methodology from the local `visual-identity-direction` skill into discovery, concept exploration, and foundation design guidance.
 - Added a stricter discovery-intake behavior: the suite should now explicitly check whether business context, audience, competitors, current assets, and intended deliverables are present before moving forward.
@@ -59,7 +64,12 @@
 
 ## 中文
 
-### 1.5 - 当前发布版
+### 1.6 - 当前发布版
+
+- 将套件名称从 `brand-identity-design-skills` 调整为 `VIS STUDIO`，并把技术名统一为 `vis-studio`。
+- 重写 README 的对外叙事方式，让仓库首页更像产品主页，更适合公开传播和介绍。
+
+### 1.5 - 方法论与 intake 发布版
 
 - 把本地 `visual-identity-direction` skill 中可复用的方法论并入 discovery、concept 和 foundation 阶段。
 - 新增更严格的 discovery intake 机制：在继续推进前，先显式检查 business context、audience、competitors、current assets 和 deliverables 是否齐全。

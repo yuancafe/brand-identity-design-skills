@@ -1,33 +1,123 @@
-# Brand Identity Design Skills
+# VIS STUDIO
 
 [English](#english) | [中文](#中文)
 
 ## English
 
-Brand Identity Design Skills is a full VIS system for AI-assisted brand work. It is not just a set of prompts for logo or UI exploration. It is a bundled workflow that turns brand strategy, visual direction, identity production, application expansion, and governance handoff into reusable skill logic plus machine-readable design outputs.
+VIS STUDIO is an AI-native operating system for brand identity and visual identity system work.
 
-This bundle is built for teams who want AI to work from explicit brand rules instead of vague taste prompts. It combines:
+It helps teams move from messy inputs to a reusable brand system that AI can actually follow: strategy, visual direction, identity system, applications, governance, wrappers, adapters, and brand-specific prompts.
 
-- a 5-step public VIS workflow
-- support skills for scope planning, routing, playbook selection, and packaging
-- design-markdown outputs for AI-readable brand guidance
-- tool adapters for different design tools and model families
-- auto-generated brand-specific wrapper skills and prompt files
+This is not just a prompt pack.
+This is not just a logo workflow.
+This is not just a UI `DESIGN.md`.
 
-The design-markdown approach is informed by the broader `DESIGN.md` ecosystem around Stitch and examples such as VoltAgent's `awesome-design-md`, then expanded from UI/UX into full brand identity and VIS work.
+VIS STUDIO is built for full VIS work.
 
-It also incorporates useful methodology from the local `visual-identity-direction` skill, including strategy-to-visual translation, creative-brief discipline, moodboard rationale, logo-brief structure, photography direction, and typography/color reasoning.
+### What VIS STUDIO is
 
-### What this bundle does
+VIS STUDIO turns brand work into a structured production system:
 
-- Diagnose a brand project and choose the right production route
-- Distill multiple reference brands into an original direction instead of copying them
-- Build the core identity system
-- Expand the identity into application families and touchpoints
-- Publish a machine-readable `brand-pack`
-- Generate AI-readable design files for foundation, UI/UX, and applications
-- Generate thin wrapper skills for downstream brand use
-- Auto-generate brand-specific prompts for each supported tool and model family
+- discovery and strategic diagnosis
+- reference distillation instead of reference copying
+- concept exploration and territory narrowing
+- identity-system production
+- application-system planning and routing
+- governance handoff and downstream reuse
+
+It packages the result into machine-readable outputs so AI tools can work inside the approved system instead of improvising from vague style language.
+
+### Why it exists
+
+Most AI design workflows break in the same place:
+
+- strategy is missing
+- references are copied instead of distilled
+- application work is treated as an afterthought
+- tools are prompted inconsistently
+- every new asset restarts from zero
+
+VIS STUDIO solves that by making the brand system explicit, reusable, and automation-ready.
+
+### What it produces
+
+Core design documents:
+
+- `REFERENCE_STYLE_DISTILLATION.md`
+- `BRAND_FOUNDATION_DESIGN.md`
+- `UI_UX_DESIGN.md`
+- `APPLICATION_DESIGN.md`
+- `DESIGN_INDEX.md`
+
+Machine-readable packaging:
+
+- `brand_pack.json`
+
+Reusable downstream wrappers:
+
+- `<brand-slug>-brand-applications`
+- `<brand-slug>-brand-guidelines`
+
+Tool-enablement layer:
+
+- `TOOL_ADAPTER_INDEX.md`
+- `references/tool-adapters/*.md`
+- `TOOL_PROMPT_SKELETON_INDEX.md`
+- `references/tool-prompt-skeletons/*.md`
+
+### What gets generated automatically
+
+When a project reaches the packaging stage, VIS STUDIO can automatically generate:
+
+- the final `brand_pack.json`
+- a brand-specific applications wrapper
+- a brand-specific guidelines wrapper
+- bundled tool adapters inside the generated wrapper
+- brand-specific prompt files inside the generated wrapper
+
+Those brand-specific prompt files currently support:
+
+- Figma MCP
+- Stitch
+- Pencil
+- Adobe Illustrator
+- Adobe Photoshop
+- Canva
+- Inkscape
+- image-generation models such as Doubao, Kling, Nano Banana, and similar tools
+
+### Workflow
+
+1. `brand-discovery-strategy`
+   Diagnose the route, check input completeness, ask targeted questions when critical information is missing, and build the strategic base.
+2. `visual-concept-exploration`
+   Distill references, translate strategy into visual territories, and narrow direction.
+3. `identity-system-production`
+   Build the identity core and first structured brand payload.
+4. `brand-application-system`
+   Convert the identity into application families, routes, and production logic.
+5. `brand-governance-rollout`
+   Finalize governance, packaging, and downstream reuse.
+
+### What makes it different
+
+- It treats VIS as a system, not a one-off design exercise.
+- It separates identity production from application production.
+- It forces reference distillation before visual execution.
+- It supports targeted intake questions when inputs are incomplete.
+- It creates outputs that downstream AI tools can reliably consume.
+- It includes both generic tool skeletons and brand-specific prompt generation.
+
+### Methodology inside the system
+
+VIS STUDIO also incorporates useful methods from the local `visual-identity-direction` skill, including:
+
+- strategy-to-visual translation
+- creative-brief discipline
+- moodboard rationale
+- logo-brief structure
+- photography direction
+- typography and color reasoning
 
 ### Public skills
 
@@ -46,9 +136,67 @@ It also incorporates useful methodology from the local `visual-identity-directio
 - `application-mockup-composer`
 - `brand-application-factory`
 
-### Core outputs
+### Repository structure
 
-Design-markdown outputs:
+- `skills/`
+  Public VIS workflow skills
+- `support/`
+  Internal support skills for routing, packaging, and production logic
+- `references/`
+  Shared architecture notes, adapters, and prompt system references
+- `README.md`
+  Product overview
+- `CHANGELOG.md`
+  Release history
+
+### Important notes
+
+- `brand_pack.json` is the downstream source of truth.
+- Illustrator-heavy work is still treated as `manual_vector`.
+- Canva-friendly work follows template logic.
+- Photoshop-friendly work follows mockup logic.
+- The wrapper layer is intentionally thin: it applies the approved system, not redefines it.
+
+## 中文
+
+VIS STUDIO 是一套面向品牌识别与视觉识别系统工作的 AI 原生操作系统。
+
+它的目标，是把零散、模糊、依赖设计师个人脑内判断的品牌项目，转成 AI 也能稳定执行的结构化系统：从策略、方向、识别系统、应用扩展、治理交付，到 wrapper、adapter 和品牌专属 prompt，全部纳入同一条生产链。
+
+它不是普通的 prompt 包。
+它不是单独的 logo 工作流。
+它也不只是一个面向 UI 的 `DESIGN.md` 套件。
+
+VIS STUDIO 面向的是完整 VIS 工作。
+
+### VIS STUDIO 是什么
+
+VIS STUDIO 把品牌工作变成一套可执行系统：
+
+- discovery 与策略诊断
+- 参考风格提炼，而不是照抄参考
+- 概念探索与方向收敛
+- 识别系统生产
+- 应用系统规划与路由
+- 治理交接与后续复用
+
+它会把结果封装成机器可读输出，让 AI 工具不再依赖模糊的审美描述，而是依据已批准的品牌系统工作。
+
+### 为什么要做它
+
+大多数 AI 设计流程的问题都出在同几个地方：
+
+- 没有策略基础
+- 参考没有提炼，只有拼贴模仿
+- application 被当成附属工作
+- 不同工具的调用方式不统一
+- 每做一个新物料都像重新开局
+
+VIS STUDIO 的作用，就是把品牌系统显式化、可复用化、自动化。
+
+### 它会产出什么
+
+核心设计文件：
 
 - `REFERENCE_STYLE_DISTILLATION.md`
 - `BRAND_FOUNDATION_DESIGN.md`
@@ -56,32 +204,33 @@ Design-markdown outputs:
 - `APPLICATION_DESIGN.md`
 - `DESIGN_INDEX.md`
 
-Packaging outputs:
+机器可读打包层：
 
 - `brand_pack.json`
+
+可复用下游 wrapper：
+
 - `<brand-slug>-brand-applications`
 - `<brand-slug>-brand-guidelines`
 
-Tool-enablement outputs:
+工具协同层：
 
 - `TOOL_ADAPTER_INDEX.md`
 - `references/tool-adapters/*.md`
 - `TOOL_PROMPT_SKELETON_INDEX.md`
 - `references/tool-prompt-skeletons/*.md`
 
-### What gets auto-generated
+### 哪些内容会自动生成
 
-When the bundle reaches the packaging stage, it does not stop at generic documentation.
+当项目走到 packaging 阶段，VIS STUDIO 可以自动生成：
 
-It automatically generates:
+- 最终 `brand_pack.json`
+- 品牌专属 applications wrapper
+- 品牌专属 guidelines wrapper
+- 每个 wrapper 内自带的一套 tool adapters
+- 每个 wrapper 内自带的一套品牌专属 prompt 文件
 
-- a final machine-readable `brand_pack.json`
-- a brand-specific applications wrapper skill
-- a brand-specific guidelines wrapper skill
-- a self-contained set of tool adapters inside each generated wrapper
-- a self-contained set of brand-specific prompt files inside each generated wrapper
-
-Those brand-specific prompt files are generated for:
+这些品牌专属 prompt 目前支持：
 
 - Figma MCP
 - Stitch
@@ -90,85 +239,40 @@ Those brand-specific prompt files are generated for:
 - Adobe Photoshop
 - Canva
 - Inkscape
-- image-generation models such as Doubao, Kling, Nano Banana, and similar tools
+- 文生图模型，如豆包、可灵、Nano Banana 及类似工具
 
-So downstream design work can start from brand-filled prompts instead of blank generic templates.
-
-### Workflow
+### 工作流
 
 1. `brand-discovery-strategy`
-   Diagnose the project, audit existing assets, define scope, and build the strategic base.
+   先判断项目路径，检查输入是否完整；如果关键信息缺失，就先追问，再建立策略基础。
 2. `visual-concept-exploration`
-   Translate strategy into visual territories, distill references, and choose the strongest direction.
+   提炼参考风格，把策略翻译成视觉方向，并收敛方案。
 3. `identity-system-production`
-   Build the identity core and the first structured brand payload.
+   构建识别系统核心，并产出第一版结构化品牌数据。
 4. `brand-application-system`
-   Turn the identity into application families, production routes, and scaling logic.
+   把识别系统扩展成应用家族、生产路线和规模化逻辑。
 5. `brand-governance-rollout`
-   Finalize the pack, governance, handoff documents, and reusable automation layer.
+   完成治理、打包和后续复用层。
 
-### Why application production is a separate phase
+### 它和普通品牌技能的区别
 
-Application production is not just “more design.” It has its own scope logic, route logic, output logic, and scaling constraints. This bundle treats it as an explicit layer so teams can handle a small set of touchpoints or a large rollout without flattening everything into one vague guideline file.
+- 它把 VIS 当成系统，而不是一次性设计任务。
+- 它明确区分 identity production 和 application production。
+- 它要求先做 reference distillation，再做视觉执行。
+- 它支持缺信息时的 targeted intake questions。
+- 它会产出 AI 工具可以稳定消费的结构化结果。
+- 它同时提供通用 skeleton 和品牌专属 prompt 自动生成。
 
-### Repository structure
+### 系统内部的方法论
 
-- `skills/`
-  Public VIS workflow skills
-- `support/`
-  Internal packaging, routing, and production support skills
-- `references/`
-  Shared architecture notes, adapter contracts, and prompt skeleton references
-- `README.md`
-  Package overview
-- `CHANGELOG.md`
-  Version history
+VIS STUDIO 同时吸收了本地 `visual-identity-direction` skill 中有价值的方法，包括：
 
-### Important notes
-
-- The public repository keeps paths generic and does not expose local absolute installation paths.
-- `brand_pack.json` is the downstream source of truth for automation.
-- Illustrator-heavy work is still treated as `manual_vector`.
-- Canva-friendly work is routed through template logic.
-- Photoshop-friendly work is routed through mockup logic.
-- The wrapper layer is intentionally thin. It should apply the approved system, not redefine it.
-
-### Key files
-
-- `references/V3_ARCHITECTURE.md`
-- `references/PROCESS_SYNTHESIS.md`
-- `references/TOOL_ADAPTER_INDEX.md`
-- `references/TOOL_PROMPT_SKELETON_INDEX.md`
-- `support/brand-application-factory/scripts/build_brand_pack.py`
-- `support/brand-application-factory/scripts/generate_wrapper_skill.py`
-- `support/brand-application-factory/assets/sample_brand_foundation.json`
-
-## 中文
-
-Brand Identity Design Skills 是一套面向 AI 协作的完整 VIS 系统。它不是只给 logo 或 UI 灵感的 prompt 集，而是把品牌策略、视觉方向、识别系统生产、应用扩展、治理交接，统一封装成可复用的 skill 工作流和机器可读输出。
-
-这个 bundle 的目标，是让 AI 不是凭模糊审美“猜品牌”，而是根据明确的品牌规则来工作。它把下面几层整合在一起：
-
-- 5 步公开 VIS 工作流
-- scope、route、playbook、packaging 等支持技能
-- AI 可读的 design markdown 输出
-- 面向不同设计工具和模型的 adapter
-- 自动生成的品牌专属 wrapper skill 和 prompt 文件
-
-其中 design-markdown 的思路参考了 Stitch 周边的 `DESIGN.md` 生态，以及 VoltAgent 的 `awesome-design-md`，但能力范围从 UI/UX 扩展到了完整 VIS。
-
-同时也吸收了本地 `visual-identity-direction` skill 中可复用的方法论，包括 strategy-to-visual translation、creative brief、moodboard rationale、logo brief、摄影方向，以及字体和色彩推导逻辑。
-
-### 这个 bundle 能做什么
-
-- 诊断品牌项目并选择正确生产路径
-- 把多个参考品牌提炼成原创方向，而不是直接模仿
-- 构建核心识别系统
-- 把识别系统扩展成应用家族和触点体系
-- 产出机器可读的 `brand-pack`
-- 生成 foundation、UI/UX、application 三层 AI 可读设计文件
-- 生成可直接下游调用的 wrapper skill
-- 为每种支持的工具和模型自动生成品牌专属 prompt
+- strategy-to-visual translation
+- creative brief discipline
+- moodboard rationale
+- logo brief structure
+- photography direction
+- typography and color reasoning
 
 ### 公开技能
 
@@ -187,99 +291,23 @@ Brand Identity Design Skills 是一套面向 AI 协作的完整 VIS 系统。它
 - `application-mockup-composer`
 - `brand-application-factory`
 
-### 核心输出
-
-design-markdown 输出：
-
-- `REFERENCE_STYLE_DISTILLATION.md`
-- `BRAND_FOUNDATION_DESIGN.md`
-- `UI_UX_DESIGN.md`
-- `APPLICATION_DESIGN.md`
-- `DESIGN_INDEX.md`
-
-包装输出：
-
-- `brand_pack.json`
-- `<brand-slug>-brand-applications`
-- `<brand-slug>-brand-guidelines`
-
-工具协同输出：
-
-- `TOOL_ADAPTER_INDEX.md`
-- `references/tool-adapters/*.md`
-- `TOOL_PROMPT_SKELETON_INDEX.md`
-- `references/tool-prompt-skeletons/*.md`
-
-### 哪些内容是自动生成的
-
-当流程走到 packaging 阶段时，bundle 不只是产出通用文档。
-
-它会自动生成：
-
-- 最终 machine-readable `brand_pack.json`
-- 品牌专属 applications wrapper skill
-- 品牌专属 guidelines wrapper skill
-- 每个 wrapper 内自带的一套 tool adapters
-- 每个 wrapper 内自带的一套品牌专属 prompt 文件
-
-这些品牌专属 prompt 目前覆盖：
-
-- Figma MCP
-- Stitch
-- Pencil
-- Adobe Illustrator
-- Adobe Photoshop
-- Canva
-- Inkscape
-- 文生图模型，如豆包、可灵、Nano Banana 及类似工具
-
-也就是说，下游做设计时，不需要再从空白通用模板开始改，而是直接从品牌已填充好的 prompt 出发。
-
-### 工作流
-
-1. `brand-discovery-strategy`
-   做项目诊断、资产盘点、范围判断，建立策略基础。
-2. `visual-concept-exploration`
-   把策略翻译成视觉方向，提炼参考风格，并收敛到最优方向。
-3. `identity-system-production`
-   构建识别系统核心，并产出第一版结构化品牌数据。
-4. `brand-application-system`
-   把识别系统扩展成应用家族、生产路线和规模化逻辑。
-5. `brand-governance-rollout`
-   完成最终 pack、治理规则、交付文件和可复用自动化层。
-
-### 为什么 application 要单独成阶段
-
-Application 不是“再做一些设计”，而是独立的一层生产系统，有自己的范围逻辑、路由逻辑、输出逻辑和规模化约束。只有把它单独拆出来，才能稳定处理少量触点，也能支撑大规模 rollout，而不是把所有东西压成一份模糊 guideline。
-
 ### 仓库结构
 
 - `skills/`
   公开 VIS 工作流技能
 - `support/`
-  内部 packaging、routing、production 支持技能
+  内部 routing、packaging、production support 技能
 - `references/`
-  共享架构说明、adapter contract 和 prompt skeleton 参考
+  共享架构说明、adapter 和 prompt 系统参考
 - `README.md`
-  项目总览
+  产品化总览
 - `CHANGELOG.md`
-  版本历史
+  发布历史
 
 ### 重要说明
 
-- 公开仓库只保留泛化路径，不暴露本地绝对安装路径。
-- `brand_pack.json` 是后续自动化的唯一事实来源。
+- `brand_pack.json` 是后续自动化的事实来源。
 - Illustrator 重型工作仍然归为 `manual_vector`。
-- 适合 Canva 的内容走模板生产逻辑。
-- 适合 Photoshop 的内容走样机生产逻辑。
-- wrapper 层刻意保持轻量，它负责应用已批准的系统，而不是重新定义系统。
-
-### 关键文件
-
-- `references/V3_ARCHITECTURE.md`
-- `references/PROCESS_SYNTHESIS.md`
-- `references/TOOL_ADAPTER_INDEX.md`
-- `references/TOOL_PROMPT_SKELETON_INDEX.md`
-- `support/brand-application-factory/scripts/build_brand_pack.py`
-- `support/brand-application-factory/scripts/generate_wrapper_skill.py`
-- `support/brand-application-factory/assets/sample_brand_foundation.json`
+- 适合 Canva 的内容走模板路线。
+- 适合 Photoshop 的内容走样机路线。
+- wrapper 层刻意保持轻量，它负责应用已批准系统，而不是重新定义系统。
